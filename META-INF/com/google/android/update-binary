@@ -544,6 +544,20 @@ if [ -f banner ]; then
   ui_print " " " ";
 fi;
 
+ui_print "   __________________________________________";    
+ui_print "   \______   \_   _____/\______   \_   _____/  ";
+ui_print "    |     ___/|    __)_  |       _/|    __)     ";
+ui_print "    |    |    |        \ |    |   \|     \       ";
+ui_print "    |____|   /_______  / |____|_  /\___  /       ";
+ui_print "                     \/         \/     \/       "; 
+ui_print " _______________.___.____ _______  ___  _________";
+ui_print " \____    /\__  |   |    |   \   \/  / /   _____/    ";
+ui_print "   /     /  /   |   |    |   /\     /  \_____  \     ";
+ui_print "  /     /_  \____   |    |  / /     \  /        \   ";
+ui_print " /_______ \ / ______|______/ /___/\  \/_______  /   ";
+ui_print "         \/ \/                     \_/        \/  ";
+ui_print " ";
+        
 KERNEL_STRING="$(file_getprop anykernel.sh kernel.string)";
 ui_print "$KERNEL_STRING";
 if [ -f version ]; then
@@ -553,7 +567,6 @@ if [ -f version ]; then
 fi;
 ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " ";
 grep -oE 'AK_BASE.*' META-INF/com/google/android/updater-script >&2;
-ui_print " ";
 
 setup_env;
 
@@ -561,7 +574,7 @@ do_devicecheck;
 do_versioncheck;
 do_levelcheck;
 do_vendorlevelcheck;
-
+        
 ui_print "Installing...";
 # hack to maintain support for anykernel.sh files that weren't updated correctly along with the AK core
 CORE=$(grep -oE 'ak.*core.sh' anykernel.sh);
